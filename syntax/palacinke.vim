@@ -27,7 +27,6 @@ hi def link     palacinkeRepeat            Repeat
 syn match       palacinkeDeclaration       /\<fn\>/
 syn match       palacinkeDeclaration       /^fn\>/
 
-syn match comment "#.*$"    contains=@Spell,palacinkeCommentTodo
 syn match comment "\/\/.*$" contains=@Spell,palacinkeCommentTodo
 
 syn keyword     palacinkeCast              int str float array
@@ -50,7 +49,8 @@ hi def link     palacinkeBoolean           Boolean
 " Comments; their contents
 syn keyword     palacinkeTodo              contained TODO FIXME XXX BUG
 syn cluster     palacinkeCommentGroup      contains=palacinkeTodo
-syn region      palacinkeComment           start="#" end="$" contains=@palacinkeCommentGroup,@Spell,@palacinkeTodo
+syn region      palacinkeComment           start="#" end="$"   contains=@palacinkeCommentGroup,@Spell,@palacinkeTodo
+sy  region      palacinkeComment           start='/*' end='*/' contains=@palacinkeCommentGroup,@Spell,@palacinkeTodo
 
 
 hi def link     palacinkeComment           Comment
