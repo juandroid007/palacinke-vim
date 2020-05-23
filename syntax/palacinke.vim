@@ -49,8 +49,7 @@ hi def link     palacinkeBoolean           Boolean
 " Comments; their contents
 syn keyword     palacinkeTodo              contained TODO FIXME XXX BUG
 syn cluster     palacinkeCommentGroup      contains=palacinkeTodo
-syn region      palacinkeComment           start="#" end="$"   contains=@palacinkeCommentGroup,@Spell,@palacinkeTodo
-sy  region      palacinkeComment           start='/*' end='*/' contains=@palacinkeCommentGroup,@Spell,@palacinkeTodo
+syn region      palacinkeComment           start="#" end="$" contains=@palacinkeCommentGroup,@Spell,@palacinkeTodo
 
 
 hi def link     palacinkeComment           Comment
